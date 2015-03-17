@@ -4,7 +4,10 @@ class NotificationController < ApplicationController
 
     def notify
       client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-      message = client.messages.create from: '5014082532', to: '5019525363', body: 'Learning to send SMS you are.'
+
+      puts "Rails.application.secrets.twilio_account_sid: #{Rails.application.secrets.twilio_account_sid}"
+      message = client.messages.create from: '15014082532', to: '17133200303', body: 'Karthik is testing his text messaging app'
+      puts message.status
       render plain: message.status
     end
 
