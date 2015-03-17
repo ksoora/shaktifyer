@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#enables security for account APIs
+gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
@@ -22,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # sends and receives text messages
-gem 'twilio-ruby'
+gem 'twilio-ruby', '~> 3.12'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
